@@ -12,10 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
     }
+    
+    
     
     @IBAction func GameHatchStepper(_ sender: UIStepper) {
     }
+    @IBOutlet weak var hatchGameLabel: UILabel!
+    @IBOutlet weak var hatchGameStepper: UIStepper!
+    @IBAction func hatchGameStepperValueChanged(_ sender: UIStepper) {
+        
+    hatchGameLabel.text = Int(sender.value).description
+    }
+ 
+   
 }
 
